@@ -5,13 +5,13 @@ workflows:
     instance_type: mac_mini_m2
     environment:
       vars:
-        FLET_PLATFORM: ios
+        FLET_PLATFORM: ipa
     scripts:
       - name: Instalar Flet y dependencias
         script: |
           pip install -r requirements.txt
       - name: Compilar aplicacion IPA
         script: |
-          flet build ios
+          flet build ipa
     artifacts:
-      - build/ios/ipa/*.ipa
+      - build/ipa/*.ipa
