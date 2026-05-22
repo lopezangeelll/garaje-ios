@@ -15,3 +15,10 @@ workflows:
           flet build ipa
     artifacts:
       - build/ipa/*.ipa
+    publishing:
+      email:
+        recipients:
+          - k0stfn29@gmail.com
+        notify:
+          success: true
+          failure: true
